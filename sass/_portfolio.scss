@@ -1,0 +1,41 @@
+section.portfolio {
+	width: 100%;
+	.sideways h3 {
+		/* Safari */
+		-webkit-transform: rotate(-90deg);
+		/* Firefox */
+		-moz-transform: rotate(-90deg);
+		/* IE */
+		-ms-transform: rotate(-90deg);
+		/* Opera */
+		-o-transform: rotate(-90deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		width: 100%;
+		font-size: 3rem;
+		display: inline-block;
+		padding-right: 10rem;
+		margin: 0;
+		white-space: nowrap;
+		text-align: center;
+	}
+	.sideways {
+		width: 10%;
+	}
+	.portfolioDescription {
+		width: 35%;
+		padding: 3rem;
+	}
+	.portfolioItem:nth-child(2n-2) {
+		flex-direction: row-reverse;
+		position: relative;
+	}
+	.portfolioImage:nth-child(1n-2) {
+		position: relative;
+
+	}
+	.portfolioImage:nth-child(2n-2) {
+		position: relative;
+		bottom: 3rem;
+	}
+}
