@@ -1,0 +1,11 @@
+section.skills {
+	margin: 3rem auto;
+	flex-wrap: wrap;
+	.icon {
+		width: 25%;
+		text-align: center;
+	}
+	.devicons {
+		font-size: 10rem;
+	}
+}

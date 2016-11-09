@@ -1,6 +1,37 @@
+@import 'variables';
+
+html {
+	font-size: 10px;
+}
+
+/*headers*/
+
+h1 {
+	font-family: $display;
+	font-size: 4rem;
+	padding: 0;
+	margin: 0;
+}
+h2 {
+	font-family: $display;
+	font-size: 3rem;
+	padding: 0;
+	margin: 0;
+}
+h3 {
+	font-family: $display;
+	font-size: 2rem;
+}
+h4 {
+	font-family: $tag;
+	font-size: 2rem;
+}
+
 a {
 	color: #BA209B;
 	text-decoration: none;
+	font-family: $copy;
+	font-size: inherit;
 	&:hover {
 		color: #D424B1;
 	}
@@ -9,7 +40,10 @@ a {
 /* paragraphs */
 
 p {
-	line-height: 1.5;
+	line-height: 2.5rem;
+	font-family: $copy;
+	font-size: 1.6rem;
+	letter-spacing: .1rem;
 }
 
 /*blockquotes*/

@@ -1,0 +1,13 @@
+section.contact {
+	margin: 0 auto;
+	input[type=text] {
+		width: calc(33.33% - 1rem);
+		margin-right: 1rem;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	input[type=textarea] {
+		width: 100%;
+	}
+}
