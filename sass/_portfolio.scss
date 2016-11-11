@@ -1,5 +1,7 @@
 section.portfolio {
 	width: 100%;
+	clear: both;
+	background: $gray;
 	.sideways h3 {
 		/* Safari */
 		-webkit-transform: rotate(-90deg);
@@ -21,21 +23,31 @@ section.portfolio {
 	}
 	.sideways {
 		width: 10%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 	.portfolioDescription {
 		width: 35%;
 		padding: 3rem;
 	}
+	.portfolioItem {
+		justify-content: space-between;
+	}
 	.portfolioItem:nth-child(2n-2) {
 		flex-direction: row-reverse;
-		position: relative;
+/*		.portfolioImage {
+			position: relative;
+			bottom: 6rem;
+		}*/
 	}
-	.portfolioImage:nth-child(1n-2) {
-		position: relative;
-
+	.portfolioImage {
+		width: 50%;
+		transform: scale(1.15);
 	}
-	.portfolioImage:nth-child(2n-2) {
+/*	.portfolioItem:nth-child(3) .portfolioImage {
 		position: relative;
-		bottom: 3rem;
-	}
+		bottom: 6rem;
+	}*/
 }

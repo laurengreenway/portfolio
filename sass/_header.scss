@@ -1,5 +1,5 @@
 header {
-	height: 90vh;
+	height: 95vh;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -30,5 +30,8 @@ header {
 		width: 100%;
 		z-index: 99;
 		position: relative;
+		&:hover{
+			color: $white;
+		}
 	}
 }

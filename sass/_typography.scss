@@ -24,16 +24,16 @@ h3 {
 }
 h4 {
 	font-family: $tag;
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 
 a {
-	color: #BA209B;
+	color: inherit;
 	text-decoration: none;
 	font-family: $copy;
 	font-size: inherit;
 	&:hover {
-		color: #D424B1;
+		color: $seafoam;
 	}
 }
 
@@ -44,6 +44,10 @@ p {
 	font-family: $copy;
 	font-size: 1.6rem;
 	letter-spacing: .1rem;
+}
+
+.fa {
+	font-size: 2rem;
 }
 
 /*blockquotes*/

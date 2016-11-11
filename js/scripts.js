@@ -1,5 +1,67 @@
+initMap = function() {
+	console.log('dis  work?');
+	var home = {lat: 43.640483, lng: -79.374973};
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 12,
+		center: home,
+	});
+	var marker = new google.maps.Marker({
+		position: home,
+		map: map,
+	});
+};
+
+
+var portfolio = {};
+
+portfolio.display = function() {
+	// nav bar change to different color when user scrolls past splash image
+   var scroll_start = 0;
+   var colorChange = $('.navChange');
+   var offset = colorChange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+      	//change nav background to highlight color
+      	var styles = {
+      		background : "#71eeb8",
+      		transition : "background 0.3s ease",
+      	}
+ 		$('nav').css(styles);
+ 		// change hover states to reflect new nav color
+ 		$('nav a').hover(function() {
+ 			$(this).css('color', '#fff');
+ 		}, function() {
+ 			$(this).css('color', '#232323');
+ 		});
+       } else {
+       	// default nav
+          $('nav').css('background-color', '#ffffff');
+       }
+   });
+
+	// when user clicks on a nav link, smooth scroll takes user to appropriate section
+
+	// animate triangle on landing??
+
+	// hamburger menu at small desktop breakpoint
+
+
+
+
+};
+
+portfolio.init = function() {
+	portfolio.display();
+}
+ 
 $(function(){
-
-	console.log("It's working");
-
+	// $('a').click(function() {
+	// 	console.log('does this work?');
+	// 	smoothScroll({
+	// 		easing: 'swing',
+	// 	});
+	// });
+	portfolio.init();
+	console.log('hi');
 });

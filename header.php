@@ -22,7 +22,7 @@
       'container' => false,
       'theme_location' => 'primary'
     )); ?>
-  <h2>Lauren Codes</h2>
+
       <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'social'

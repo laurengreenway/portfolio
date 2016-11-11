@@ -1,13 +1,64 @@
 section.contact {
-	margin: 0 auto;
-	input[type=text] {
-		width: calc(33.33% - 1rem);
-		margin-right: 1rem;
-		&:last-of-type {
+	margin: 6rem auto;
+	position: relative;
+	border: 1px solid blue;
+	.content {
+		border: 1px solid green;
+	}
+	h2 {
+		display: inline-block;
+	}
+	.map {
+		height: 400px;
+		width: 80%;
+		border: 1px solid red;
+		position: relative;
+		right: 0;
+		top: 0;
+	}
+	input {
+		width: calc(33.3% - 1rem);
+		margin-right: 1.3rem;
+		padding: 1rem;
+		font-size: 1.6rem;
+		border: 2px solid $black;
+		&:nth-child(3n) {
 			margin-right: 0;
 		}
+		&:focus {
+			border: 2px solid $seafoam;
+			outline-color: $seafoam;
+		}
 	}
-	input[type=textarea] {
+	input[type=email] {
+		width: calc(33.33% - 1rem);
+		margin-right: 1rem;
+		padding: 1rem;
+		font-size: 1.6rem;
+	}
+	textarea {
 		width: 100%;
+		font-size: 1.6rem;
+		margin-top: 2rem;
+		border: 2px solid $black;
+		padding: 1rem;
+		&:focus {
+			border: 2px solid $seafoam;
+			outline-color: $seafoam;
+		}
+	}
+	.content {
+		margin: 0 auto;
+		float: none;
+	}
+	input[type=submit] {
+		width: 100%;
+		margin-top: 2rem;
+	}
+	form {
+		width: 80%;
+		position: relative;
+		left: 0;
 	}
 }
+
