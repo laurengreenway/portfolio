@@ -1,20 +1,17 @@
 section.contact {
 	margin: 6rem auto;
 	position: relative;
-	border: 1px solid blue;
-	.content {
-		border: 1px solid green;
-	}
 	h2 {
 		display: inline-block;
 	}
 	.map {
 		height: 400px;
-		width: 80%;
+		width: 50%;
 		border: 1px solid red;
 		position: relative;
-		right: 0;
-		top: 0;
+		right: 4rem;
+		top: -1rem;
+		transform: scale(1.15);
 	}
 	input {
 		width: calc(33.3% - 1rem);
@@ -56,9 +53,14 @@ section.contact {
 		margin-top: 2rem;
 	}
 	form {
-		width: 80%;
+		width: 50%;
 		position: relative;
-		left: 0;
+		left: 4rem;
+		top: 4rem;
+		background: $gray;
+		padding: 2rem;
+		transform: scale(1.15);
+		z-index: 2;
 	}
 }
 

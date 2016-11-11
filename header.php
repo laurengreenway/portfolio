@@ -5,7 +5,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php  wp_title('|', true, 'right'); ?></title>
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Roboto:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link href='http://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />

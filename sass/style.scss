@@ -71,6 +71,12 @@ section {
 	&:hover {
 		border: 2px solid $seafoam;
 		color: $seafoam;
+		transition: 0.3s ease;
+	}
+	&:focus {
+		border: 2px solid $seafoam;
+		color: $seafoam;
+		transition: 0.3s ease;
 	}
 }
 

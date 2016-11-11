@@ -48,7 +48,7 @@
                 <div class="sideways">
                   <h3><?php the_title(); ?></h3>
                 </div>
-                <div class="portfolioDescription">
+                <div class="portfolioDescription grid">
                   <p><?php the_content(); ?></p>
                   <a href="<?php echo the_field('project_link') ?>"><button class="btn">View Live <i class="fa fa-long-arrow-right animated wiggle" aria-hidden="true"></i></button></a>
                 </div>
@@ -135,10 +135,11 @@
           </div>
         </section>
         <section class="contact container" id="contact">
-          
-          <div class="content">
+          <div class="">
             <h2>Contact Me</h2>
-            <div class="map"></div>
+          </div>
+          <div class="grid">
+            
             <form action="http://www.focuspocus.io/magic/0d32c7e6f3ee6ffb8838f2fb5f125b12" method="POST" class="emailMe" autocomplete="off" name="emailMe">
               <!-- <label for=""></label> -->
               <input type="text" placeholder="Your Name" class="half">
@@ -148,6 +149,7 @@
               <input type="submit" value="Send Message" class="btn">
               
             </form>
+            <div class="map"></div>
           </div>
         </section>
       <?php endwhile; // end the loop?>

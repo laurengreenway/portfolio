@@ -41,6 +41,37 @@ portfolio.display = function() {
    });
 
 	// when user clicks on a nav link, smooth scroll takes user to appropriate section
+	$('.aboutLink a').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 500);
+	    return false;
+		});
+	$('.portfolioLink a').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 500);
+	    return false;
+		});
+	$('.skillsLink a').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 500);
+	    return false;
+		});
+	$('.contactLink a').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 500);
+	    return false;
+		});
+	$('.homeLink a').click(function(){
+	    $('html, body').animate({
+	        scrollTop: 0
+	    }, 500);
+	    return false;
+		});
+
 
 	// animate triangle on landing??
 

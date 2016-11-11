@@ -5,7 +5,7 @@ section.about {
 		background: rgba(113,238,184,0.6);
 		width: 40%;
 		position: relative;
-		top: -8rem;
+		top: -7rem;
 		left: 8rem;
 		z-index: 10;
 		padding: 0;
@@ -38,7 +38,9 @@ section.about {
 		width: 40vw;
 	}
 }
-
+article {
+	margin-right: 6rem;
+}
 aside {
 	width: 65%;
 /*	width: 20%;
