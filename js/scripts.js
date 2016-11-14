@@ -81,7 +81,6 @@ portfolio.display = function() {
 	// animate triangle on landing??
 
 	// hamburger menu at small desktop breakpoint
-
 	// media queries
 	$(window).on("load, resize", function() {
 	    var viewportWidth = $(window).width();
