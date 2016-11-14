@@ -1,0 +1,146 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	html {
+		.show-menu {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			height: 90vh;
+		}
+		#menu-primary-nav {
+			li {
+				text-align: center;
+				a {
+					font-size: 5rem;
+					text-transform: uppercase;
+					.fa {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+		header {
+			.triangleBox {
+				width: 0; 
+				height: 0; 
+				border-left: 200px solid transparent;
+				border-right: 200px solid transparent;
+				border-top: 260px solid rgba(113,238,184,0.4);
+				position: absolute;
+				transform: translate(-50%, 0%);
+				left: 50%;
+				top: 30%;
+				z-index: 1;
+			}
+		}
+		section.about {
+			.seafoamSquare {
+				top: -7rem;
+				left: 4.5rem;
+			}
+			.avatar {
+				width: 40%;
+				position: relative;
+				left: -4.5rem;
+			}
+			figcaption {
+				padding: 0;
+				margin: 0;
+
+			}
+		}
+		section.portfolio {
+			.portfolioItem {
+				flex-direction: row-reverse;
+				flex-wrap: wrap;
+				align-content: flex-end;
+				&:nth-child(2n-2) {
+					background: rgba(113,238,184,0.6);
+				}
+				.sideways {
+					width: 20%;
+					padding: 3rem;
+				}
+				.portfolioDescription {
+					width: 80%;
+					padding: 3rem;
+				}
+				.portfolioImage {
+					width: 100%;
+					padding: 3rem;
+				}
+			}
+		}
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	html {
+		section.about {
+			aside {
+				display: none;
+			}
+			article {
+				width: 100%;
+				margin: 0;
+			}
+			figcaption {
+				position: static;
+				width: 100%;
+			}
+			.seafoamSquare {
+				-moz-clip-path: polygon(0 0, 50% 100%, 100% 0);
+				-webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+				clip-path: polygon(0 0, 50% 100%, 100% 0);
+				top: 12rem;
+				z-index: -1;
+			}
+			.avatar {
+				z-index: 2;
+			}
+		}
+		section.contact {
+			.grid {
+				flex-wrap: wrap-reverse;
+			}
+			form {
+				position: static;
+				width: 100%;
+				transform: scale(1);
+				margin: 3rem auto;
+				input[type=text] {
+					width: 100%;
+				}
+				input[type=email] {
+					width: 100%;
+				}
+			}
+			.map {
+				position: static;
+				top: 0;
+				left: 0;
+				width: 100%;
+				margin: 3rem auto;
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	html {
+		body {
+			background: yellow;
+			section.skills {
+				.devicons {
+					font-size: 7.5rem;
+				}
+			}
+			h1 {
+				font-size: 3rem;
+			}
+		}
+	}
+}

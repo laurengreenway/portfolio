@@ -15,13 +15,10 @@
  g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
  s.parentNode.insertBefore(g,s)}(document,"script"));
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="js/jquery.smooth-scroll.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-  async defer>
-</script>
-<script src="js/scripts.js"></script>
+
 
 <?php wp_footer(); ?>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBExXXgpY6TrSTpTBkP5wtxqN_MyjKW6IE&callback=initMap">
+</script>
 </body>
 </html>

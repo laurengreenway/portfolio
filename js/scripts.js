@@ -1,7 +1,7 @@
 initMap = function() {
 	console.log('dis  work?');
 	var home = {lat: 43.640483, lng: -79.374973};
-	var map = new google.maps.Map(document.getElementById('map'), {
+	var map = new google.maps.Map(document.querySelector('.map'), {
 		zoom: 12,
 		center: home,
 	});
@@ -37,7 +37,12 @@ portfolio.display = function() {
        } else {
        	// default nav
           $('nav').css('background-color', '#ffffff');
-       }
+          $('a').hover(function() {
+          	$('nav a:hover').css('color', '#71eeb8')
+          }, function() {
+          	$('nav a').css('color', '#232323')
+          });
+       };
    });
 
 	// when user clicks on a nav link, smooth scroll takes user to appropriate section
@@ -76,6 +81,28 @@ portfolio.display = function() {
 	// animate triangle on landing??
 
 	// hamburger menu at small desktop breakpoint
+
+	// media queries
+	$(window).on("load, resize", function() {
+	    var viewportWidth = $(window).width();
+	    if (viewportWidth < 940) {
+	    	$('#menu-primary-nav').addClass('hidden');
+			$('.hamburger').removeClass('hidden').on('click', function(){
+				$('#menu-primary-nav').toggleClass('hidden show-menu');
+				$('.hamburger i').toggleClass('fa-times fa-bars');
+			});
+
+			// hide menu when user clicks any (?) icon
+			$('#menu-primary-nav a').on('click', function(){
+				console.log('close nav function hiee');
+				$('#menu-primary-nav').toggleClass('hidden show-menu');
+				$('.hamburger i').toggleClass('fa-times fa-bars');
+			});
+
+			// show x icon when menu is shown
+			
+	    }
+	});
 
 
 

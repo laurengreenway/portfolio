@@ -20,6 +20,7 @@
 @import 'contact';
 @import 'portfolio';
 @import 'wiggle';
+@import 'mediaQueries';
 
 /*
 ====================================
@@ -80,7 +81,12 @@ section {
 	}
 }
 
-
+.hidden {
+	display: none;
+}
+.show-menu {
+	display: block;
+}
 
 
 

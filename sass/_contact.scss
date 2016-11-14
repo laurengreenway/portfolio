@@ -1,21 +1,22 @@
 section.contact {
 	margin: 6rem auto;
 	position: relative;
+	padding: 5rem;
 	h2 {
 		display: inline-block;
 	}
 	.map {
 		height: 400px;
 		width: 50%;
-		border: 1px solid red;
 		position: relative;
 		right: 4rem;
 		top: -1rem;
 		transform: scale(1.15);
 	}
 	input {
-		width: calc(33.3% - 1rem);
+		width: calc(50% - 1.3rem);
 		margin-right: 1.3rem;
+		margin-bottom: 1.3rem;
 		padding: 1rem;
 		font-size: 1.6rem;
 		border: 2px solid $black;
@@ -28,15 +29,16 @@ section.contact {
 		}
 	}
 	input[type=email] {
-		width: calc(33.33% - 1rem);
-		margin-right: 1rem;
+		width: 49%;
+		margin-right: 0;
 		padding: 1rem;
 		font-size: 1.6rem;
 	}
-	textarea {
+	.hundoP {
 		width: 100%;
+	}
+	textarea {
 		font-size: 1.6rem;
-		margin-top: 2rem;
 		border: 2px solid $black;
 		padding: 1rem;
 		&:focus {
@@ -49,15 +51,15 @@ section.contact {
 		float: none;
 	}
 	input[type=submit] {
-		width: 100%;
 		margin-top: 2rem;
+		width: 100%;
 	}
 	form {
 		width: 50%;
 		position: relative;
 		left: 4rem;
 		top: 4rem;
-		background: $gray;
+		background: rgba(222,222,222,0.6);
 		padding: 2rem;
 		transform: scale(1.15);
 		z-index: 2;

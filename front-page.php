@@ -144,9 +144,9 @@
               <!-- <label for=""></label> -->
               <input type="text" placeholder="Your Name" class="half">
               <input type="email" placeholder="E-mail Address" class="half">
-              <input type="text" placeholder="Subject">
-              <textarea name="Message" id="" rows="10" placeholder="Say something!"></textarea>
-              <input type="submit" value="Send Message" class="btn">
+              <input type="text" placeholder="Subject" class="hundoP">
+              <textarea name="Message" id="" rows="10" placeholder="Say something!" class="hundoP"></textarea>
+              <input type="submit" value="Send Message" class="btn" class="hundoP">
               
             </form>
             <div class="map"></div>
