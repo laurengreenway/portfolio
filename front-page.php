@@ -9,10 +9,24 @@
           <div class="aboutFancy grid">
 
             <div class="seafoamSquare grid-cell"></div>
+            <svg width='100' height='100'>
+              <defs>
+                <clipPath id="clipping" clipPathUnits="objectBoundingBox">
+                  <polygon points="0.5 0, 0 1, 1 1" />
+                </clipPath>
+              </defs>
+            </svg>
 
             <div class="avatar grid-cell">
               <img src="<?php echo the_field('about_image') ?>" alt="Lauren Greenway Profile Image">
             </div>
+            <svg width='100' height='100'>
+              <defs>
+                <clipPath id="clipping2" clipPathUnits="objectBoundingBox">
+                  <polygon points="0 0, 0.5 1, 1 0" />
+                </clipPath>
+              </defs>
+            </svg>
 
           </div>
           <figcaption class="grid-cell">
@@ -25,8 +39,8 @@
             </article>
             <aside>
               <div class="sideColumn">
-                <h3>D</h3>
-                <h3>O</h3>
+                <h3>H</h3>
+                <h3>Y</h3>
                 <h3>P</h3>
                 <h3>E</h3>
               </div>
@@ -36,31 +50,37 @@
         </section> <!-- end about -->
       </div>
         <section class="portfolio" id="portfolio">
-            <?php  
-              $portfolioArgs = array(
-                'post_type' => 'portfolio_items'
-              );
-              $portfolioLoop = new WP_Query($portfolioArgs);
+          <div class="title">
+            <h2>Portfolio</h2>
+          </div>
+          
+          <?php  
+            $portfolioArgs = array(
+              'post_type' => 'portfolio_items'
+            );
+            $portfolioLoop = new WP_Query($portfolioArgs);
 
-              if($portfolioLoop->have_posts()) while($portfolioLoop->have_posts()) : $portfolioLoop->the_post();
-            ?>
-              <div class="portfolioItem grid">
-                <div class="sideways">
-                  <h3><?php the_title(); ?></h3>
-                </div>
-                <div class="portfolioDescription grid">
-                  <p><?php the_content(); ?></p>
-                  <a href="<?php echo the_field('project_link') ?>"><button class="btn">View Live <i class="fa fa-long-arrow-right animated wiggle" aria-hidden="true"></i></button></a>
-                </div>
-                <div class="portfolioImage">
-                  <img src="<?php the_post_thumbnail_url('large') ?>" alt="">
-                </div>
+            if($portfolioLoop->have_posts()) while($portfolioLoop->have_posts()) : $portfolioLoop->the_post();
+          ?>
+            <div class="portfolioItem grid">
+              <div class="sideways">
+                <h3><?php the_title(); ?></h3>
               </div>
-                
+              <div class="portfolioDescription grid">
+                <?php the_content(); ?>
+                <a href="<?php echo the_field('project_link') ?>"><button class="btn">View Live <i class="fa fa-long-arrow-right animated wiggle" aria-hidden="true"></i></button></a>
+              </div>
+              <div class="portfolioImage">
+                <img src="<?php the_post_thumbnail_url('large') ?>" alt="">
+              </div>
+            </div>
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?>
         </section> <!-- end portfolio -->
         <section class="skills container grid" id="skills">
+          <div class="title">
+            <h2>Skills</h2>
+          </div>
           <div class="grid-cell">
             <div class="icon animated wiggle">
               <span class="devicons devicons-html5 "></span>
@@ -133,9 +153,9 @@
             </div>
             <p>Trello</p>
           </div>
-        </section>
-        <section class="contact container" id="contact">
-          <div class="">
+        </section> <!-- end skills -->
+        <section class="contact container" id="contact"> <!-- contact start -->
+          <div class="title">
             <h2>Contact Me</h2>
           </div>
           <div class="grid">
@@ -151,7 +171,7 @@
             </form>
             <div class="map"></div>
           </div>
-        </section>
+        </section> <!-- contact end -->
       <?php endwhile; // end the loop?>
     </div> <!-- /,content -->
 

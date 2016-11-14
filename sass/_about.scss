@@ -9,9 +9,13 @@ section.about {
 		left: 7rem;
 		z-index: 10;
 		padding: 0;
-		-moz-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		/*-moz-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		-o-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		-ms-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);*/
 		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		-webkit-clip-path: url('#clipping');
+		clip-path: url('#clipping');
 	}
 	.avatar {
 		width: 40%;
@@ -23,9 +27,13 @@ section.about {
 			width: 100%;
 			height: 100%;
 			z-index: 10;
-			-moz-clip-path: polygon(0 0, 50% 100%, 100% 0);
+/*			-moz-clip-path: polygon(0 0, 50% 100%, 100% 0);
+			-o-clip-path: polygon(0 0, 50% 100%, 100% 0);
+			-ms-clip-path: polygon(0 0, 50% 100%, 100% 0);*/
 			-webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
 			clip-path: polygon(0 0, 50% 100%, 100% 0);
+			-webkit-clip-path: url('#clipping2');
+			clip-path: url('#clipping2');
 		}
 	}
 	.aboutMe {
@@ -35,9 +43,8 @@ section.about {
 	figcaption {
 		position: relative;
 		top: -6rem;
-		padding-left: 3rem;
 		margin-left: 3rem;
-		width: 40vw;
+		width: 30vw;
 		text-align: center;
 	}
 }

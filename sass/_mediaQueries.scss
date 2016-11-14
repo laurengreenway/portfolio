@@ -5,7 +5,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
-			height: 90vh;
+			height: 100vh;
 			li {
 				text-align: center;
 				a {
@@ -18,18 +18,6 @@
 			}
 		}
 		header {
-			.triangleBox {
-				width: 0; 
-				height: 0; 
-				border-left: 200px solid transparent;
-				border-right: 200px solid transparent;
-				border-top: 260px solid rgba(113,238,184,0.4);
-				position: absolute;
-				transform: translate(-50%, 0%);
-				left: 50%;
-				top: 30%;
-				z-index: 1;
-			}
 		}
 		section.about {
 			.seafoamSquare {
@@ -88,9 +76,8 @@
 				width: 100%;
 			}
 			.seafoamSquare {
-				-moz-clip-path: polygon(0 0, 50% 100%, 100% 0);
-				-webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-				clip-path: polygon(0 0, 50% 100%, 100% 0);
+				-webkit-clip-path: url('#clipping2');
+				clip-path: url('#clipping2');
 				top: 12rem;
 				z-index: -1;
 			}
@@ -130,10 +117,23 @@
 @media (max-width: 480px) {
 	html {
 		body {
-			background: yellow;
+			header {
+				.triangleBox {
+					width: 0; 
+					height: 0; 
+					border-left: 200px solid transparent;
+					border-right: 200px solid transparent;
+					border-top: 260px solid rgba(113,238,184,0.4);
+					position: absolute;
+					transform: translate(-50%, 0%);
+					left: 50%;
+					top: 30%;
+					z-index: 1;
+				}
+			}
 			section.skills {
 				.devicons {
-					font-size: 7.5rem;
+					font-size: 6rem;
 				}
 			}
 			h1 {
