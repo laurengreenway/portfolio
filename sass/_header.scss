@@ -20,18 +20,15 @@ header {
 		transform: translate(-50%, 0%);
 		left: 50%;
 		top: 30%;
-		z-index: 1;
+/*		z-index: 1;*/
 	}
-	h1 > a {
+	h1 {
 		font-family: $display;
 		color: $black;
 		margin: 0 auto;
 		text-align: center;
 		width: 100%;
-		z-index: 99;
 		position: relative;
-		&:hover{
-			color: $white;
-		}
+		z-index: 9;
 	}
 }

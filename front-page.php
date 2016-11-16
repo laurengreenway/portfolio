@@ -1,6 +1,6 @@
 <?php get_header();  ?>
 
-<div class="main navChange">
+<div class="main">
   <div class="content">
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -9,7 +9,7 @@
           <div class="aboutFancy grid">
 
             <div class="seafoamSquare grid-cell"></div>
-            <svg width='100' height='100'>
+            <svg width='0' height='0'>
               <defs>
                 <clipPath id="clipping" clipPathUnits="objectBoundingBox">
                   <polygon points="0.5 0, 0 1, 1 1" />
@@ -20,7 +20,7 @@
             <div class="avatar grid-cell">
               <img src="<?php echo the_field('about_image') ?>" alt="Lauren Greenway Profile Image">
             </div>
-            <svg width='100' height='100'>
+            <svg width='0' height='0'>
               <defs>
                 <clipPath id="clipping2" clipPathUnits="objectBoundingBox">
                   <polygon points="0 0, 0.5 1, 1 0" />
@@ -28,6 +28,13 @@
               </defs>
             </svg>
 
+            <svg width='0' height='0'>
+              <defs>
+                <clipPath id="clipping3" clipPathUnits="objectBoundingBox">
+                  <polygon points="0 0, 0.5 1, 1 0" />
+                </clipPath>
+              </defs>
+            </svg>
           </div>
           <figcaption class="grid-cell">
               <h4><?php the_field('about_me_caption'); ?></h4>
@@ -67,7 +74,9 @@
                 <h3><?php the_title(); ?></h3>
               </div>
               <div class="portfolioDescription grid">
+                <h3><?php the_field('project_title') ?></h3>
                 <?php the_content(); ?>
+                <p><?php the_field('project_tags') ?></p>
                 <a href="<?php echo the_field('project_link') ?>"><button class="btn">View Live <i class="fa fa-long-arrow-right animated wiggle" aria-hidden="true"></i></button></a>
               </div>
               <div class="portfolioImage">
@@ -79,7 +88,7 @@
         </section> <!-- end portfolio -->
         <section class="skills container grid" id="skills">
           <div class="title">
-            <h2>Skills</h2>
+            <h2>Technical Skills</h2>
           </div>
           <div class="grid-cell">
             <div class="icon animated wiggle">
@@ -169,7 +178,10 @@
               <input type="submit" value="Send Message" class="btn" class="hundoP">
               
             </form>
-            <div class="map"></div>
+
+            <div class="map">
+              <div class="overlay" onClick="style.pointerEvents='none'"></div>
+            </div>
           </div>
         </section> <!-- contact end -->
       <?php endwhile; // end the loop?>

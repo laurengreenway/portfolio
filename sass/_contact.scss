@@ -12,6 +12,14 @@ section.contact {
 		right: 4rem;
 		top: -1rem;
 		transform: scale(1.15);
+		z-index: 1;
+	}	
+	.overlay {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		transform: scale(1.15);
+		z-index: 2;
 	}
 	input {
 		width: calc(50% - 1.3rem);
@@ -19,12 +27,12 @@ section.contact {
 		margin-bottom: 1.3rem;
 		padding: 1rem;
 		font-size: 1.6rem;
-		border: 2px solid $black;
+		font-weight: 300;
+		border: 1.5px solid $black;
 		&:nth-child(3n) {
 			margin-right: 0;
 		}
 		&:focus {
-			border: 2px solid $seafoam;
 			outline-color: $seafoam;
 		}
 	}
@@ -39,10 +47,10 @@ section.contact {
 	}
 	textarea {
 		font-size: 1.6rem;
-		border: 2px solid $black;
+		border: 1.5px solid $black;
 		padding: 1rem;
+		font-weight: 300;
 		&:focus {
-			border: 2px solid $seafoam;
 			outline-color: $seafoam;
 		}
 	}
@@ -53,6 +61,7 @@ section.contact {
 	input[type=submit] {
 		margin-top: 2rem;
 		width: 100%;
+		font-weight: 300;
 	}
 	form {
 		width: 50%;

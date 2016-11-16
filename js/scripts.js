@@ -4,12 +4,16 @@ initMap = function() {
 	var map = new google.maps.Map(document.querySelector('.map'), {
 		zoom: 12,
 		center: home,
+        scrollwheel: false
 	});
 	var marker = new google.maps.Marker({
 		position: home,
 		map: map,
 	});
+
+
 };
+
 
 
 var portfolio = {};
@@ -80,31 +84,53 @@ portfolio.display = function() {
 
 	// animate triangle on landing??
 
+
+	// user has to click the map to zoom
+	$('.map').click(function () {
+	      $('.map overlay').css("pointer-events", "auto");
+	  });
+
 	// hamburger menu at small desktop breakpoint
 	// media queries
-	$(window).on("load, resize", function() {
-	    var viewportWidth = $(window).width();
-	    if (viewportWidth < 940) {
-	    	$('#menu-primary-nav').addClass('hidden');
-			$('.hamburger').removeClass('hidden').on('click', function(){
-				$('#menu-primary-nav').toggleClass('hidden show-menu');
-				$('.hamburger i').toggleClass('fa-times fa-bars');
-			});
 
-			// hide menu when user clicks any (?) icon
-			$('#menu-primary-nav a').on('click', function(){
-				console.log('close nav function hiee');
-				$('#menu-primary-nav').toggleClass('hidden show-menu');
-				$('.hamburger i').toggleClass('fa-times fa-bars');
-			});
+	$('.hamburger').on('click', function(){
+		$('#menu-primary-nav').toggleClass('hidden show-menu');
+		$('#menu-social').toggleClass(' show-menu-dupe hidden');
+		$('.hamburger i').toggleClass('fa-times fa-bars');
 
-			// show x icon when menu is shown
-			
-	    }
+	});
+
+	// hide menu when user clicks any (?) icon
+	$('#menu-primary-nav a').on('click', function(){
+		if($(window).width() < 940) {
+			console.log('close nav function hiee');
+			$('#menu-primary-nav').toggleClass('hidden show-menu');
+			$('.hamburger i').toggleClass('fa-times fa-bars');
+			$('#menu-social').toggleClass(' show-menu-dupe hidden');
+		}
 	});
 
 
+	function checkWindow() {
+		var viewportWidth = $(window).width();
+		if (viewportWidth < 940) {
+			$('#menu-primary-nav').addClass('hidden');
+			$('#menu-social').addClass('show-menu-dupe');
+			$('.hamburger').removeClass('hidden')
 
+			// show x icon when menu is shown
+			
+		} else {
+			$('#menu-primary-nav').removeClass('hidden');
+			$('.hamburger').addClass('hidden');
+		}
+
+	}
+
+	$(window).on("resize", function() {
+		checkWindow();
+	});
+	checkWindow();
 
 };
 

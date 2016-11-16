@@ -4,4 +4,11 @@ footer {
 	border: 2rem solid $white;
 	margin-top: 12rem;
 	text-align: center;
+	a {
+		font-size: 2rem;
+		font-weight: 700;
+	}
+	.container {
+		margin: 2rem auto;
+	}
 }

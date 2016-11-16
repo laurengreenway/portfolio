@@ -2,6 +2,9 @@ section.skills {
 	flex-wrap: wrap;
 	margin-top: 12rem;
 	margin-bottom: 12rem;
+	.title {
+		margin-left: 5vw;
+	}
 	.grid-cell {
 		width: 25%;
 		text-align: center;

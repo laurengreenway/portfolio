@@ -4,7 +4,9 @@
 	<?php // Load Meta ?>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php // wp_title('|', true, 'right'); ?>🌜Lauren Codes 🌛</title>
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+  <title><?php // wp_title('|', true, 'right'); ?>Lauren Codes 🌛</title>
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link href='http://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
@@ -37,12 +39,12 @@
     <div class="triangleBox">
     </div>
      <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+      <!-- <a href="<?php //echo home_url( '/' ); ?>" title="<?php //bloginfo( 'name', 'display' ); ?>" rel="home"> -->
         LAUREN CODES
-      </a>
+      <!-- </a> -->
     </h1>
 
 
   </div> <!-- /.container -->
 </header><!--/.header-->
-
+<div class="navChange"></div>

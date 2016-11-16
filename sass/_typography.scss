@@ -8,7 +8,7 @@ html {
 
 h1 {
 	font-family: $display;
-	font-size: 4rem;
+	font-size: 4.5rem;
 	padding: 0;
 	margin: 0;
 }
@@ -20,11 +20,11 @@ h2 {
 }
 h3 {
 	font-family: $display;
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 h4 {
 	font-family: $copy;
-	font-size: 1.8rem;
+	font-size: 2rem;
 	font-weight: 300;
 }
 
@@ -36,15 +36,19 @@ a {
 	&:hover {
 		color: $seafoam;
 	}
+	&:focus {
+		color: $seafoam;
+	}
 }
 
 /* paragraphs */
 
 p {
-	line-height: 2.5rem;
+	line-height: 2.6rem;
 	font-family: $copy;
-	font-size: 1.6rem;
-	letter-spacing: .1rem;
+	font-size: 1.7rem;
+	letter-spacing: .12rem;
+	font-weight: 300;
 }
 
 .fa {

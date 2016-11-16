@@ -29,10 +29,13 @@ ul.menu {
 
 nav {
 	justify-content: space-between;
+	align-content: flex-end;
+	align-items: flex-end;
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 100;
+	z-index: 10;
+	-webkit-transform: translate3d(0,0,0);
 	padding: 0 2rem;
 	background: #fff;
 	h2 {
@@ -46,9 +49,21 @@ nav {
 	.hamburger {
 		margin: auto 0;
 		padding: 0;
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
 	}
 	#menu-primary-nav {
 		margin: auto 0;
+	}
+	#menu-social.hidden {
+		display: none;
+	}
+	#menu-social {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		flex: 1 0 auto;
 	}
 }
 .white a:hover {

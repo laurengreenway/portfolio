@@ -1,9 +1,8 @@
 <footer>
   <div class="container">
-  	<p>hello [at] laurengreenway.com</p>
+  	<a href="mailto:hello@laurengreenway.com">hello [at] laurengreenway.com</a>
   	<p>Code by Lauren Greenway, Theme by wwwebinvader</p>
   	<p>Headshot by Pam Lau</p>
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
   </div>
 </footer>
 

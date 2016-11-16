@@ -63,32 +63,45 @@ section {
 }
 
 .btn {
-	border: 2px solid $black;
+	border: 1.5px solid $black;
 	padding: 1rem;
 	background: $white;
 	font-size: 1.6rem;
 	&:hover {
-		border: 2px solid $seafoam;
-		color: $seafoam;
-		transition: 0.3s ease;
+		background: $seafoam;
+		transition: background 0.3s ease;
 	}
 	&:focus {
-		border: 2px solid $seafoam;
-		color: $seafoam;
-		transition: 0.3s ease;
+		background: $seafoam;
+		transition: background 0.3s ease;
 	}
 }
 
 .hidden {
 	display: none;
 }
+
 .show-menu {
 	display: block;
 }
 
+.show-menu-dupe {
+
+}
+
 .title {
 	width: calc(100% - 2rem);
-	margin: 1rem;
+	margin: 3rem 1rem;
+	&:after {
+		content: '';
+		width: 20vw;
+		height: 1.5px;
+		color: $seafoam;
+		background: $seafoam;
+		display: block;
+		position: relative;
+		top: 1rem;
+	}
 }
 
 
