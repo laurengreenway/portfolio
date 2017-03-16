@@ -9,7 +9,8 @@
   <title><?php // wp_title('|', true, 'right'); ?>Lauren Codes 🌛</title>
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link href='http://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+  <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <!-- stylesheets should be enqueued in functions.php -->
   <?php wp_head(); ?>
@@ -17,6 +18,7 @@
 
 
 <body <?php body_class(); ?>>
+<?php include_once("analyticstracking.php") ?>
 
 <?php $url = wp_get_attachment_url( get_post_thumbnail_id() ); ?>
 <nav class="grid">

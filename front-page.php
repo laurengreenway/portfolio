@@ -5,9 +5,7 @@
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <section class="about" id="about">
-
           <div class="aboutFancy grid">
-
             <div class="seafoamSquare grid-cell"></div>
             <svg width='0' height='0'>
               <defs>
@@ -16,7 +14,6 @@
                 </clipPath>
               </defs>
             </svg>
-
             <div class="avatar grid-cell">
               <img src="<?php echo the_field('about_image') ?>" alt="Lauren Greenway Profile Image">
             </div>
@@ -46,10 +43,10 @@
             </article>
             <aside>
               <div class="sideColumn">
-                <h3>H</h3>
-                <h3>Y</h3>
-                <h3>P</h3>
-                <h3>E</h3>
+                <span>H</span>
+                <span>Y</span>
+                <span>P</span>
+                <span>E</span>
               </div>
             </aside>
           </div>
@@ -92,37 +89,44 @@
           </div>
           <div class="grid-cell">
             <div class="icon animated wiggle">
-              <span class="devicons devicons-html5 "></span>
+              <i class="devicons devicon-html5-plain"></i>
             </div>
             <p>HTML 5</p>
           </div>
           <div class="grid-cell">
             <div class="icon animated wiggle">
-              <span class="devicons devicons-css3" ></span>
+              <i class="devicons devicon-css3-plain"></i>
             </div>
             <p>CSS 3</p>
-          </div>
+          </div>      
           <div class="grid-cell">
             <div class="icon animated wiggle">
-              <span class="devicons devicons-sass" ></span>
-            </div>
-            <p>Sass</p>
-          </div>          
-          <div class="grid-cell">
-            <div class="icon animated wiggle">
-              <span class="devicons devicons-javascript"></span>
+              <i class="devicons devicon-javascript-plain"></i>
             </div>
             <p>JavaScript</p>
           </div>
           <div class="grid-cell">
             <div class="icon animated wiggle">
-              <span class="devicons devicons-jquery"></span>
+              <i class="devicons devicon-react-original"></i>
+            </div>
+            <p>React</p>
+          </div>
+
+          <div class="grid-cell">
+            <div class="icon animated wiggle">
+              <i class="devicons devicon-jquery-plain"></i>
             </div>
             <p>jQuery</p>
           </div>
           <div class="grid-cell">
             <div class="icon animated wiggle">
-              <span class="devicons devicons-gulp" ></span>
+              <i class="devicons devicon-sass-original"></i>
+            </div>
+            <p>Sass</p>
+          </div>     
+          <div class="grid-cell">
+            <div class="icon animated wiggle">
+              <i class="devicons devicon-gulp-plain"></i>
             </div>
             <p>Gulp</p>
           </div>
@@ -134,19 +138,19 @@
           </div>
           <div class="grid-cell">
             <div class="icon animated wiggle">
-              <span class="devicons devicons-wordpress"></span>
+              <i class="devicons devicon-wordpress-plain"></i>
             </div>
             <p>Wordpress</p>
           </div>
           <div class="grid-cell">
             <div class="icon animated wiggle">
-              <span class="devicons devicons-git"></span>
+              <i class="devicons devicon-git-plain"></i>
             </div>
             <p>Git</p>
           </div>
           <div class="grid-cell">
             <div class="icon animated wiggle">
-              <span class="devicons devicons-github_badge"></span>
+              <i class="devicons devicon-github-plain"></i>
             </div>
             <p>GitHub</p>
           </div>
@@ -156,12 +160,6 @@
             </div>
             <p>Sublime Text</p>
           </div>
-          <div class="grid-cell">
-            <div class="icon animated wiggle">
-              <span class="devicons devicons-trello"></span>
-            </div>
-            <p>Trello</p>
-          </div>
         </section> <!-- end skills -->
         <section class="contact container" id="contact"> <!-- contact start -->
           <div class="title">
@@ -169,12 +167,12 @@
           </div>
           <div class="grid">
             
-            <form action="http://www.focuspocus.io/magic/0d32c7e6f3ee6ffb8838f2fb5f125b12" method="POST" class="emailMe" autocomplete="off" name="emailMe">
+            <form action="http://www.focuspocus.io/magic/0d32c7e6f3ee6ffb8838f2fb5f125b12" method="POST"  autocomplete="off" name="emailMe">
               <!-- <label for=""></label> -->
-              <input type="text" placeholder="Your Name" class="half">
-              <input type="email" placeholder="E-mail Address" class="half">
-              <input type="text" placeholder="Subject" class="hundoP">
-              <textarea name="Message" id="" rows="10" placeholder="Say something!" class="hundoP"></textarea>
+              <input type="text" placeholder="Your Name" class="half" required="true" name="Name">
+              <input type="email" placeholder="E-mail Address" class="half" required="true" name="Email Address">
+              <input type="text" placeholder="Subject" class="hundoP" name="Subject">
+              <textarea name="Message" id="" rows="10" placeholder="Say something!" class="hundoP" name="Message"></textarea>
               <input type="submit" value="Send Message" class="btn" class="hundoP">
               
             </form>

@@ -1,3 +1,26 @@
+/*Custom*/
+@media (max-width: 1125px) {
+	html {
+		section.portfolio {
+			.portfolioItem {
+/*				flex-direction: row-reverse;
+				flex-wrap: wrap-reverse;*/
+				.sideways {
+					width: 15%;
+					padding: 2rem;
+				}
+				.portfolioDescription {
+					width: 35%;
+					padding: 2rem;
+				}
+				.portfolioImage {
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
 	html {
@@ -40,6 +63,9 @@
 			}
 		}
 		section.portfolio {
+			.title {
+				width: calc(100% - 5vw);
+			}
 			.portfolioItem {
 				flex-direction: row-reverse;
 				flex-wrap: wrap-reverse;
@@ -86,6 +112,8 @@
 			}*/
 		}
 		section.contact {
+			margin: 0 auto;
+			padding: 0 5rem;
 			.grid {
 				flex-wrap: wrap;
 			}
@@ -94,7 +122,7 @@
 				top: 1px;
 				left: 0;
 				width: 100%;
-				transform: scale(1);
+				transform: translateZ(0) scale(1);
 /*				margin: 3rem auto;*/
 				input[type=text] {
 					width: 100%;
@@ -111,6 +139,9 @@
 				margin: 3rem auto;
 				transform: scale(1);
 			}
+		}
+		footer {
+			margin-top: 3rem;
 		}
 	}
 }

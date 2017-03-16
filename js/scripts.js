@@ -34,17 +34,29 @@ portfolio.display = function() {
  		$('nav').css(styles);
  		// change hover states to reflect new nav color
  		$('nav a').hover(function() {
- 			$(this).css('color', '#fff');
+ 			$(this).css('color', '#fff')
  		}, function() {
- 			$(this).css('color', '#232323');
+ 			// remove colour when hover is no longer
+ 			$(this).css('color', '#232323')
  		});
+ 		$('nav a').focus(function() {
+ 			$(this).css('color', '#fff')
+ 		}, function() {
+ 			$(this).css('color', '#232323')
+ 		});
+ 		
        } else {
        	// default nav
           $('nav').css('background-color', '#ffffff');
           $('a').hover(function() {
-          	$('nav a:hover').css('color', '#71eeb8')
+          	$('nav a:hover').css('color', '#71eeb8');
           }, function() {
-          	$('nav a').css('color', '#232323')
+          	$('nav a').css('color', '#232323');
+          });
+          $('a').focus(function() {
+          	$('nav a:focus').css('color', '#71eeb8');
+          }, function() {
+          	$('nav a').css('color', '#232323');
           });
        };
    });
@@ -95,7 +107,7 @@ portfolio.display = function() {
 
 	$('.hamburger').on('click', function(){
 		$('#menu-primary-nav').toggleClass('hidden show-menu');
-		$('#menu-social').toggleClass(' show-menu-dupe hidden');
+		$('#menu-social').toggleClass('show-menu-dupe hidden');
 		$('.hamburger i').toggleClass('fa-times fa-bars');
 
 	});
@@ -106,7 +118,7 @@ portfolio.display = function() {
 			console.log('close nav function hiee');
 			$('#menu-primary-nav').toggleClass('hidden show-menu');
 			$('.hamburger i').toggleClass('fa-times fa-bars');
-			$('#menu-social').toggleClass(' show-menu-dupe hidden');
+			$('#menu-social').toggleClass('show-menu-dupe hidden');
 		}
 	});
 

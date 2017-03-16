@@ -17,10 +17,9 @@ header {
 		border-right: 300px solid transparent;
 		border-top: 400px solid rgba(113,238,184,0.4);
 		position: absolute;
-		transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%) translateZ(0);
 		left: 50%;
 		top: 30%;
-/*		z-index: 1;*/
 	}
 	h1 {
 		font-family: $display;

@@ -6,6 +6,7 @@
   </div>
 </footer>
 
+<?php wp_footer(); ?>
 <script>
 // scripts.js, plugins.js and jquery are enqueued in functions.php
 /* Google Analytics! */
@@ -16,8 +17,8 @@
 </script>
 
 
-<?php wp_footer(); ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBExXXgpY6TrSTpTBkP5wtxqN_MyjKW6IE&callback=initMap">
 </script>
+
 </body>
 </html>

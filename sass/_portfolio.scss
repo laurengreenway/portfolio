@@ -2,6 +2,7 @@ section.portfolio {
 	width: 100%;
 	clear: both;
 	.title {
+		width: calc(100% - 5vw);
 		margin-left: 5vw;
 	}
 	.sideways h3 {
@@ -14,7 +15,8 @@ section.portfolio {
 		/* Opera */
 		-o-transform: rotate(-90deg);
 		/* Internet Explorer */
-		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		transform: translateZ(0) rotate(-90deg);
+		/*filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);*/
 		width: 100%;
 		font-size: 3rem;
 		display: inline-block;

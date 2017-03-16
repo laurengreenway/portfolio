@@ -8,9 +8,6 @@ section.about {
 		top: -7rem;
 		left: 7rem;
 		padding: 0;
-/*		-moz-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-		-o-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-		-ms-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);*/
 		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 		-webkit-clip-path: url('#clipping');
@@ -21,15 +18,12 @@ section.about {
 		width: 40%;
 		position: relative;
 		left: -7rem;
+		transform: translateZ(0);
 		img {
 			width: 100%;
 			border-top: 20px solid #71eeb8;
 			width: 100%;
 			height: 100%;
-			/*z-index: 10;*/
-/*			-moz-clip-path: polygon(0 0, 50% 100%, 100% 0);
-			-o-clip-path: polygon(0 0, 50% 100%, 100% 0);
-			-ms-clip-path: polygon(0 0, 50% 100%, 100% 0);*/
 			-webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
 			clip-path: polygon(0 0, 50% 100%, 100% 0);
 			-webkit-clip-path: url('#clipping2');
@@ -41,6 +35,9 @@ section.about {
 	.aboutMe {
 		margin: 6rem auto;
 		justify-content: space-between;
+		background-image: url(images/seafoam.jpg);
+		background-size: cover;
+		background-attachment: fixed;
 	}
 	figcaption {
 		position: relative;
@@ -48,26 +45,30 @@ section.about {
 		margin-left: 3rem;
 		width: 30vw;
 		text-align: center;
+		h4 {
+			z-index: 3;
+		}
 	}
 }
 article {
-	margin-right: 6rem;
+	padding-right: 6rem;
+	background-color: #fff;
 }
 aside {
 	width: 65%;
-/*	width: 20%;
-	background-image: url(images/seafoam.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-	padding: 1rem;*/
+/*	background: $seafoam;*/
+	border: 5px solid $seafoam;
+	padding: 1rem;
 	.sideColumn {
-		/*background-color: $white;*/
-		padding: 1rem;
+/*		background-color: $white;*/
+		margin: 0 auto;
+		
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-/*		&:before {
+/*		border: 1px solid black;*/
+		&:before {
 			z-index: -2;
 			top: 0;
 			right: 0;
@@ -83,18 +84,21 @@ aside {
 			bottom: .125em;
 			left: .125em;
 			background-color: #000;
-		}*/
-		h3 {
+		}
+		span {
 			display: inline;
 			margin: 0;
 			text-align: center;
 			width: inherit;
 			font-size: 6rem;
-/*			-moz-background-clip: text; 
+			font-family: $display;
+			-moz-background-clip: text; 
 			-webkit-background-clip: text;
 			background-clip: text;
-			color: $black;
-			-webkit-text-fill-color: transparent;*/
+			opacity: 1;
+			color: rgba(0,0,0,0);
+			-webkit-text-fill-color: transparent;
+			/*border: 1px solid black;*/
 		}
 	}
 }
